@@ -3,17 +3,17 @@ while true
   puts "0(グー)1(チョキ)2(パー)3(戦わない)"
   hand_type = gets.to_i # ユーザーの入力値を取得し、数字へ変換しています
   if hand_type == 0 
-    hand_type2 = "#{rand(3)}" #0〜2までの数値
+    hand_type2 = "#{rand(3)}" #相手プレイヤー0〜2までの数値
     puts "ホイ！"
     puts "---------------"
     puts "あなた：グーを出しました"
   elsif hand_type == 1
-    hand_type2 = "#{rand(3)}" #0〜2までの数値
+    hand_type2 = "#{rand(3)}" #相手プレイヤー0〜2までの数値
     puts "ホイ！"
     puts "---------------"
     puts "あなた：チョキを出しました"
   elsif hand_type == 2
-    hand_type2 = "#{rand(3)}" #0〜2までの数値
+    hand_type2 = "#{rand(3)}" #相手プレイヤー0〜2までの数値
     puts "ホイ！"
     puts "---------------"
     puts "あなた：パーを出しました"
@@ -25,7 +25,7 @@ while true
     break
   end
 
-  case hand_type2
+  case hand_type2 
   when "#{0}"
     puts "相手：グーを出しました"
     puts "---------------"
@@ -38,13 +38,13 @@ while true
   end 
 
   if hand_type == 0 && hand_type2 == "#{0}"|| hand_type == 1 && hand_type2 == "#{1}" || hand_type == 2 && hand_type2 == "#{2}"
-    direction_type2 = "#{}"
+    direction_type2 = "#{}" #空にする
     puts "あいこで。。。"
   elsif hand_type == 0 && hand_type2 == "#{1}" || hand_type == 0 && hand_type2 == "#{2}" 
     puts "あっち向いて〜"
     puts "0(上)1(下)2(左)3(右)"
     direction_type = gets.to_i #あなたの方向
-    direction_type2 = "#{rand(4)}" #0〜3までの数値
+    direction_type2 = "#{rand(4)}" #相手0〜3までの数値
     if direction_type == 0 
       puts "ホイ！"
       puts "---------------"
@@ -66,7 +66,7 @@ while true
     puts "あっち向いて〜"
     puts "0(上)1(下)2(左)3(右)"
     direction_type = gets.to_i #あなたの方向
-    direction_type2 = "#{rand(4)}" #0〜3までの数値
+    direction_type2 = "#{rand(4)}" #相手0〜3までの数値
     if direction_type == 0 
       puts "ホイ！"
       puts "---------------"
@@ -88,7 +88,7 @@ while true
     puts "あっち向いて〜"
     puts "0(上)1(下)2(左)3(右)"
     direction_type = gets.to_i #あなたの方向
-    direction_type2 = "#{rand(4)}" #0〜3までの数値
+    direction_type2 = "#{rand(4)}" #相手0〜3までの数値
     if direction_type == 0 
       puts "ホイ！"
       puts "---------------"
